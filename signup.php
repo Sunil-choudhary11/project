@@ -21,8 +21,20 @@ if(isset($_POST['signup'])){
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    mysqli_query($conn,"INSERT INTO admin(username,email,password) VALUES('$username','$email','$password')");
-    echo "<div class='alert alert-success mt-2'>Signup Successful</div>";
+    // ✅ Check if email ends with @gmail.com
+    if (!preg_match("/^[a-zA-Z0-9._%+-]+@gmail\.com$/", $email)) {
+        echo "<div class='alert alert-danger mt-2'>Only Gmail (@gmail.com) emails are allowed!</div>";
+    } else {
+
+        // Optional: check if email already exists
+        $check = mysqli_query($conn, "SELECT * FROM admin WHERE email='$email'");
+        if(mysqli_num_rows($check) > 0){
+            echo "<div class='alert alert-warning mt-2'>Email already registered!</div>";
+        } else {
+            mysqli_query($conn,"INSERT INTO admin(username,email,password) VALUES('$username','$email','$password')");
+            echo "<div class='alert alert-success mt-2'>Signup Successful</div>";
+        }
+    }
 }
 ?>
 </body>
