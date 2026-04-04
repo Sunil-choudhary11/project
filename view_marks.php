@@ -12,7 +12,6 @@ function printPage(){
 <body class="container mt-4">
 <h2>Student Result System</h2>
 <button onclick="printPage()" class="btn btn-dark mb-3">Print Result</button>
-
 <table class="table table-bordered">
 <tr>
 <th>Name</th>
