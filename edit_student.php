@@ -4,6 +4,7 @@ include 'navbar.php';
 $id = $_GET['id'];
 $data = mysqli_fetch_assoc(mysqli_query($conn,"SELECT * FROM students WHERE id=$id"));
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
