@@ -3,7 +3,6 @@ $host = "localhost";
 $user = "root";
 $password = "";
 $database = "sms_project";
-
 $conn = mysqli_connect($host, $user, $password, $database);
 
 if (!$conn) {
