@@ -14,7 +14,6 @@
 <input type="text" name="class" class="form-control mb-2" placeholder="Class">
 <button name="add" class="btn btn-success">Add Student</button>
 </form>
-
 <?php
 if(isset($_POST['add'])){
     mysqli_query($conn,"INSERT INTO students(name,email,phone,course,class)
