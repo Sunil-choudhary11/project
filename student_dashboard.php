@@ -6,7 +6,6 @@ if(!isset($_SESSION['student_id'])){
     header("Location: student_login.php");
     exit();
 }
-
 $id = $_SESSION['student_id'];
 
 // 🔹 JOIN student + marks
