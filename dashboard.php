@@ -1,7 +1,6 @@
 <?php 
 include 'config.php'; 
 include 'navbar.php'; 
-
 $count = mysqli_fetch_assoc(mysqli_query($conn,"SELECT COUNT(*) as total FROM students"));
 ?>
 <!DOCTYPE html>
