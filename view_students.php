@@ -10,7 +10,6 @@
 <tr>
 <th>ID</th><th>Name</th><th>Email</th><th>Course</th><th>Action</th>
 </tr>
-
 <?php
 $res = mysqli_query($conn,"SELECT * FROM students");
 while($row = mysqli_fetch_assoc($res)){
