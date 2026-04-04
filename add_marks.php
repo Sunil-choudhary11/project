@@ -13,7 +13,6 @@ $student_id = $_GET['id']; ?>
 <input type="number" name="s3" class="form-control mb-2" placeholder="Subject 3" required>
 <button name="save" class="btn btn-success">Save Marks</button>
 </form>
-
 <?php
 if(isset($_POST['save'])){
 $s1=$_POST['s1'];
