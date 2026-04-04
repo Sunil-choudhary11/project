@@ -1,7 +1,6 @@
 <?php 
 include 'config.php'; 
 include 'navbar.php'; 
-
 // safety check
 if(!isset($conn)){
     die("Database connection error!");
